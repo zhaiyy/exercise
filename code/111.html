@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var ary=[];
+    function getquality(index) {
+        for(var i=2;i<=index;i++){
+            console.log(index)
+            if(index%i==0){
+                ary.push(i);
+                if(index/i!=1){
+                    getquality(index/i);
+                }else{
+                    console.log(ary)
+                    return false;
+                }
+            }
+        }
+        console.log(ary)
+    }
+    getquality(15)
+
+</script>
+</html>

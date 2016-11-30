@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+
+</head>
+<body>
+<div>
+    <textarea id="textArea">
+        </textarea>
+    </div>
+</body>
+<script>
+    document.addEventListener("paste", function (e){
+        if ( !(e.clipboardData && e.clipboardData.items) ) {
+            return ;
+        }
+
+        for (var i = 0, len = e.clipboardData.items.length; i < len; i++) {
+            var item = e.clipboardData.items[i];
+
+            if (item.kind ==="string"&&item.type=='text/plain') {
+                item.getAsString(function (str) {
+                    // str 是获取到的字符串
+                        console.log(item.type)
+                        console.log(str)
+
+                })
+            } else if (item.kind ==="file") {
+                var pasteFile = item.getAsFile();
+                console.log(pasteFile)
+                // pasteFile就是获取到的文件
+            }
+        }
+    });</script>
+
+</html>
