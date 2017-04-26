@@ -1,0 +1,21 @@
+{
+  "name": "webpack_exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.0",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}
