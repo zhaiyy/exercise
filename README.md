@@ -111,11 +111,11 @@ css
   css
 
 ```
-\#parent {
+#parent {
     padding: 5% 0;
 }
 
-\#child {
+#child {
     padding: 10% 0;
 }
 ```
@@ -308,7 +308,7 @@ window对象的内置属性都拥有全局作用域，例如 `window.name`、`wi
 
 # Javascript 原型链及 原型链 继承
 
-1\. C.prototype 用于建立由new C()创建的对象的原型
+1. C.prototype 用于建立由new C()创建的对象的原型
 
 * 每一个函数都有一个天生自带的属性：prototype（普通函数也有，只不过没有什么意义）
 
@@ -316,11 +316,11 @@ window对象的内置属性都拥有全局作用域，例如 `window.name`、`wi
 
 * 这个对象中有一个自己特殊的属性：constructor，其有指回函数自己
 
-2\. obj.\_proto\_ 获取obj对象的原型对象的非标准方法，每一个对象数据类型（或实例）天生自带的属性
+2. obj._proto_ 获取obj对象的原型对象的非标准方法，每一个对象数据类型（或实例）天生自带的属性
 
-3\. Object.getPrototypeOf(obj)是ES5中用来获取obj对象的原型对象的标准方法
+3. Object.getPrototypeOf(obj)是ES5中用来获取obj对象的原型对象的标准方法
 
-4\. Object.hasOwnProperty(obj)用来检查某一个属性是否属于某一个对象的私有属性
+4. Object.hasOwnProperty(obj)用来检查某一个属性是否属于某一个对象的私有属性
 
 javascript继承机制是基于原型，而不是类。简单白话理解即：B如果想继承A的属性和方法，只需要把A的一个实例给B的原型链就可以了
 
@@ -594,7 +594,7 @@ return a-b;
 # es6的 新增的 特性
 
 * const/let
-* ()=\>{}指针函数
+* ()=>{}指针函数
 * …type
 * 可以按照一定的模式，从数组或者对象中获取数据，进行复制，也就是解构
 * 函数中的默认值
@@ -788,7 +788,7 @@ vue老版本中用`$dispatch`，子组件传递把需要向父组件传递的值
 
 ## 子组件相互通信
 
-通信过程：子-\>父-\>子，子组件先通信给父组件，父组件再通过`$broadcast`派发给子组件。
+通信过程：子->父->子，子组件先通信给父组件，父组件再通过`$broadcast`派发给子组件。
 
 # 前端性能优化
 
@@ -904,7 +904,7 @@ fn3.call(fn1);//请问输出什么结果，为什么1
 
 表示：
 
-Fn3.call(fn1)==\>fn2.call.call(fn1)
+Fn3.call(fn1)==>fn2.call.call(fn1)
 
 fn3执行，并且fn3的this指针指向fn1 相当于fn1.fn3();fn1.call();
 
@@ -998,7 +998,7 @@ D.1,4,2,3
 
 ### 例如:
 
-### repeat ('a', 3) =\> 'aaa'
+### repeat ('a', 3) => 'aaa'
 ```
 function repeat (str, count) {
 
@@ -1353,11 +1353,11 @@ function indexAry(ele,ary){
 
         return numSeries;
     }
-    ```
+```
 
 ### 插入排序
 
-   ```
+```
     function insertSort( arr ) {
         var len = arr.length,
             temp;
@@ -1375,9 +1375,10 @@ function indexAry(ele,ary){
         }
         return arr;
     }
-    ```
+    
+```
 
-#### 去除首尾空格
+### 去除首尾空格
 ```
     function removePlace( str ) {
     	var reg = /(^s\*)|(s\*)$/;
@@ -1387,4 +1388,4 @@ function indexAry(ele,ary){
     	}
     }
     
-    ```
+```
