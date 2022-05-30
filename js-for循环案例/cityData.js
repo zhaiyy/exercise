@@ -1674,8 +1674,4 @@ const data = [
   }
 ]
 
-const cityData = []
-for (let i = 0; i <= 1; i++) {
-  cityData.push(...data)
-}
-module.export = cityData
+module.exports = { cityData: data, dataLenList: [10000], loopNum: 1000 }
